@@ -100,7 +100,7 @@ function Projects() {
                 <Link to={"/contact"}>CONTACT</Link>
               </li>
             </ul>
-            <a href="Gobalakrishnan-1_250301_100056.pdf">
+            <a href="gobalakrishnan.pdf">
               <button>Resume</button>
             </a>
           </div>
