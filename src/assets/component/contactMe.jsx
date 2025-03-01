@@ -107,6 +107,16 @@ function ContactMe() {
         </div>
         <div className="container-4">
           <h1>CONTACT</h1>
+          <div style={{background:'transparent'}}>
+            <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
+              <img src="call.png" style={{width:"30px",height:"30px"}}></img>
+              <h4  style={{color:"#FFFFFF",fontWeight:"500"}}>+91 7695985963</h4>
+            </div>
+            <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
+              <img src="mail.png" style={{width:"30px",height:"30px"}}></img>
+              <h4  style={{color:"#FFFFFF",fontWeight:"500"}}>a.g.gobalakrishnan@gmail.com</h4>
+            </div>
+          </div>
           <div>
             <p>
               <nav style={{ display: "flex", flexDirection: "column" }}>
