@@ -117,7 +117,7 @@ function Projects() {
               <h2 style={{ color: "#fc466b", fontWeight: "500" }}>
                 QR Code Generator
               </h2>
-              <ul style={{ marginLeft: "20px" }}>
+              <ul style={{ marginLeft: "30px" }}>
                 <li>
                   Built a QR Code generator with React.js to create and download
                   QR codes for text or URLs.
@@ -133,7 +133,7 @@ function Projects() {
               >
                 Advice App
               </h2>
-              <ul style={{ marginLeft: "20px" }}>
+              <ul style={{ marginLeft: "30px" }}>
                 <li>
                   Created an Advice App using React.js to fetch and display
                   random advice from a public API.
@@ -152,7 +152,7 @@ function Projects() {
               >
                 Weather App
               </h2>
-              <ul style={{ marginLeft: "20px" }}>
+              <ul style={{ marginLeft: "30px" }}>
                 <li>
                   Developed a weather app in React.js to show real-time weather
                   data using a public API.
@@ -171,7 +171,7 @@ function Projects() {
               >
                 Monthly Calendar App
               </h2>
-              <ul style={{ marginLeft: "20px" }}>
+              <ul style={{ marginLeft: "30px" }}>
                 <li>
                   Built a monthly calendar app in React.js to view and select
                   dates.
@@ -189,7 +189,7 @@ function Projects() {
               >
                 Currency Converter
               </h2>
-              <ul style={{ marginLeft: "20px" }}>
+              <ul style={{ marginLeft: "30px" }}>
                 <li>
                   Created a currency converter in React.js using a public API
                   for live exchange rates.
