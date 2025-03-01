@@ -25,7 +25,7 @@ function Projects() {
               }}
             >
               <div
-                style={{ display: "flex", alignItems: "center", gap: "30px" }}
+                style={{ display: "flex", alignItems: "center", gap: "30px",borderBottom:"1px solid black",paddingBottom:"20px" }}
               >
                 <div
                   style={{ display: "flex", gap: "10px", alignItems: "center" }}

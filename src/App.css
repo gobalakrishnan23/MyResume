@@ -214,8 +214,9 @@
     }
     .box1{
         background: rgb(2,0,36);
-        background: linear-gradient(217deg, rgba(2,0,36,1) 0%, rgb(77, 255, 0) 0%, rgb(121, 9, 9) 72%);
+        background: linear-gradient(217deg, rgba(2,0,36,1) 0%, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 72%);
         height: 100%;
+        z-index: 1;
     }
     .full-container{
         padding: 30px;

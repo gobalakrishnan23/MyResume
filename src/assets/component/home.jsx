@@ -30,7 +30,7 @@ function Home() {
                 padding:"20px"
               }}
             >
-              <div style={{display:"flex",alignItems:"center",gap:"30px"}}>
+              <div style={{display:"flex",alignItems:"center",gap:"30px",borderBottom:"1px solid black",paddingBottom:"20px"}}>
                 <div style={{display:"flex",gap:"10px",alignItems:"center"}}>
                   <img src="WhatsApp Image 2025-02-28 at 7.00.46 PM.jpeg" style={{width:"30px",height:"30px",borderRadius:"100%",}}></img>
                   <p>GOBALAKRISHNAN</p>
