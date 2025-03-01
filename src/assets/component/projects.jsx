@@ -100,13 +100,18 @@ function Projects() {
                 <Link to={"/contact"}>CONTACT</Link>
               </li>
             </ul>
-            <a href="https://github.com/gobalakrishnan23">
-              <button>GitUp</button>
+            <a href="Gobalakrishnan-1_250301_100056.pdf">
+              <button>Resume</button>
             </a>
           </div>
         </div>
         <div className="container-4">
+          <nav style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
           <h1>PROJECTS</h1>
+          <a href="https://github.com/gobalakrishnan23">
+            <button style={{padding:'5px',border:"2px solid blue",background:"transparent",color:"#FFFFFF",fontWeight:"500",borderRadius:"30px"}}>GitUp</button>
+          </a>
+          </nav>
           <div>
             <p>
               <h2 style={{ color: "#fc466b", fontWeight: "500" }}>

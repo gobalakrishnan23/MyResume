@@ -100,8 +100,8 @@ function About() {
                 <Link to={"/contact"}>CONTACT</Link>
               </li>
             </ul>
-            <a href="https://github.com/gobalakrishnan23">
-              <button>GitUp</button>
+            <a href="Gobalakrishnan-1_250301_100056.pdf">
+              <button>Resume</button>
             </a>
           </div>
         </div>
