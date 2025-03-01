@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 function Home() {
   const [view, setView] = useState(false);
@@ -11,10 +12,10 @@ function Home() {
   function handleClose() {
     setView(false);
   }
-  function handleGo(){
+  function handleGo() {
     navigate("/projects");
   }
-  function handleContact(){
+  function handleContact() {
     navigate("/contact");
   }
   return (
@@ -22,31 +23,49 @@ function Home() {
       <div className="mixed-bg">
         {view && (
           <div style={{ position: "relative" }} className="box">
-            <ul className="box1"
+            <ul
+              className="box1"
               style={{
                 listStyleType: "none",
                 position: "fixed",
                 right: "0px",
-                padding:"20px"
+                padding: "20px",
               }}
             >
-              <div style={{display:"flex",alignItems:"center",gap:"30px",borderBottom:"1px solid black",paddingBottom:"20px"}}>
-                <div style={{display:"flex",gap:"10px",alignItems:"center"}}>
-                  <img src="WhatsApp Image 2025-02-28 at 7.00.46 PM.jpeg" style={{width:"30px",height:"30px",borderRadius:"100%",}}></img>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "30px",
+                  borderBottom: "1px solid black",
+                  paddingBottom: "20px",
+                }}
+              >
+                <div
+                  style={{ display: "flex", gap: "10px", alignItems: "center" }}
+                >
+                  <img
+                    src="WhatsApp Image 2025-02-28 at 7.00.46 PM.jpeg"
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      borderRadius: "100%",
+                    }}
+                  ></img>
                   <p>GOBALAKRISHNAN</p>
                 </div>
                 <img
-                src="close.png"
-                onClick={handleClose}
-                style={{ width: "20px", height: "20px",}}
-              ></img>
+                  src="close.png"
+                  onClick={handleClose}
+                  style={{ width: "20px", height: "20px" }}
+                ></img>
               </div>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "column",
                   gap: "30px",
-                  marginTop:"20px"
+                  marginTop: "20px",
                 }}
                 className="link"
               >
@@ -102,10 +121,31 @@ function Home() {
         </div>
         <div className="full-container">
           <div className="container-2">
-            <p>HELLO THERE, WELCOME TO MY SITE</p>
-            <h1 >I'm Gobala Krishnan</h1>
+            <motion.p
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 2.5 }}
+              className="p-5 bg-blue-500 text-white"
+            >
+              HELLO THERE, WELCOME TO MY SITE
+            </motion.p>
+            <motion.h1
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 2.5 }}
+              className="p-5 bg-blue-500 text-white"
+            >
+              I'm Gobala Krishnan
+            </motion.h1>
             <h1 className="role">A Front-end Developer</h1>
-            <h1>& Fresher</h1>
+            <motion.h1
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 2.5 }}
+              className="p-5 bg-blue-500 text-white"
+            >
+              & Fresher
+            </motion.h1>
             <div>
               <button onClick={handleGo}>PROJECTS</button>
               <button onClick={handleContact}>CONTACT ME</button>
