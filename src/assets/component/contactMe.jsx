@@ -110,11 +110,15 @@ function ContactMe() {
           <div style={{background:'transparent'}}>
             <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
               <img src="call.png" style={{width:"30px",height:"30px"}}></img>
-              <h4  style={{color:"#FFFFFF",fontWeight:"500"}}>+91 7695985963</h4>
+              <h4><a href="tel:+91 7695985963" style={{color:"#FFFFFF",fontWeight:"500"}}>+91 7695985963</a></h4>
             </div>
             <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
               <img src="mail.png" style={{width:"30px",height:"30px"}}></img>
-              <h4  style={{color:"#FFFFFF",fontWeight:"500"}}>a.g.gobalakrishnan@gmail.com</h4>
+              <h4><a href="mailto:a.g.gobalakrishnan@gmail.com" style={{color:"#FFFFFF",fontWeight:"500"}}>a.g.gobalakrishnan@gmail.com</a></h4>
+            </div>
+            <div style={{display:"flex",alignItems:"center",gap:"10px"}}>
+              <img src="whatsapp.png" style={{width:"30px",height:"30px"}}></img>
+              <h4><a href=" https://wa.me/7695985963" style={{color:"#FFFFFF",fontWeight:"500"}}>WhatsApp</a></h4>
             </div>
           </div>
           <div>
