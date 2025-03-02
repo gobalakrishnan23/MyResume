@@ -136,7 +136,7 @@ function ContactMe() {
                     marginTop: "10px",
                     marginBottom: "10px",
                   }}
-                  placeholder=" Enter your First Name"
+                  placeholder="First Name"
                 ></input>
                 <label style={{ color: "##fc466b", fontWeight: "500" }}>
                   Last Name:
@@ -150,7 +150,7 @@ function ContactMe() {
                     marginTop: "10px",
                     marginBottom: "10px",
                   }}
-                  placeholder="Enter your Last Name"
+                  placeholder="Last Name"
                 ></input>
                 <label style={{ color: "##fc466b", fontWeight: "500" }}>
                   Email:
@@ -164,7 +164,8 @@ function ContactMe() {
                     marginTop: "10px",
                     marginBottom: "10px",
                   }}
-                  placeholder="Enter your Email"
+                  placeholder="Email"
+                  type="email"
                 ></input>
                 <label style={{ color: "##fc466b", fontWeight: "500" }}>
                   Phone Number:
@@ -178,7 +179,8 @@ function ContactMe() {
                     marginTop: "10px",
                     marginBottom: "10px",
                   }}
-                  placeholder="Enter your Phone Number"
+                  placeholder="Phone Number"
+                  type="number"
                 ></input>
                 <label style={{ color: "##fc466b", fontWeight: "500" }}>
                   Massage:
@@ -193,7 +195,7 @@ function ContactMe() {
                     marginBottom: "10px",
                     height: "100px",
                   }}
-                  placeholder="Enter your Massage"
+                  placeholder="Massage"
                 ></textarea>
                 <button
                   style={{
