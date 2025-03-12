@@ -1,8 +1,21 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import emailjs from '@emailjs/browser';
 
 function ContactMe() {
   const [view, setView] = useState(false);
+  const [formData, setFormData] = useState({
+    firstname: '',
+    lastname:'',
+    email: '',
+    phonenumber: '',
+    message: ''
+  });
+  const [status, setStatus] = useState('');
+
+  function handleChange(e){
+     setFormData({...formData,[e.target.name]:e.target.value});
+  }
 
   function handleView() {
     setView(true);
@@ -10,6 +23,30 @@ function ContactMe() {
   function handleClose() {
     setView(false);
   }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Replace these with your EmailJS credentials
+    const serviceID = 'service_uycbyzg';
+    const templateID = 'template_zkm3p55';
+    const publicKey = 'uyv1eY5hmi0X_IH3F';
+
+    emailjs.send(serviceID, templateID, {
+      from_name: formData.firstname+formData.lastname,
+      reply_to: formData.email,
+      message: formData.message,
+    }, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setStatus('Email sent successfully!');
+        setFormData({ firstname: '',lastname:'',phonenumber:'', email: '', message: '' }); // Reset form
+      })
+      .catch((error) => {
+        console.log('FAILED...', error);
+        setStatus('Failed to send email. Please try again.');
+      });
+  };
   return (
     <>
       <div className="mixed-bg">
@@ -127,7 +164,7 @@ function ContactMe() {
                 <label style={{ color: "##fc466b", fontWeight: "500" }}>
                   First Name:
                 </label>
-                <input
+                <input value={formData.firstname} onChange={handleChange} name="firstname"
                   className="input"
                   style={{
                     padding: "10px",
@@ -141,7 +178,7 @@ function ContactMe() {
                 <label style={{ color: "##fc466b", fontWeight: "500" }}>
                   Last Name:
                 </label>
-                <input
+                <input value={formData.lastname} onChange={handleChange} name="lastname"
                   className="input"
                   style={{
                     padding: "10px",
@@ -155,7 +192,7 @@ function ContactMe() {
                 <label style={{ color: "##fc466b", fontWeight: "500" }}>
                   Email:
                 </label>
-                <input
+                <input value={formData.email} onChange={handleChange} name="email"
                   className="input"
                   style={{
                     padding: "10px",
@@ -170,7 +207,7 @@ function ContactMe() {
                 <label style={{ color: "##fc466b", fontWeight: "500" }}>
                   Phone Number:
                 </label>
-                <input
+                <input value={formData.phonenumber} onChange={handleChange} name="phonenumber"
                   className="input"
                   style={{
                     padding: "10px",
@@ -183,9 +220,9 @@ function ContactMe() {
                   type="number"
                 ></input>
                 <label style={{ color: "##fc466b", fontWeight: "500" }}>
-                  Massage:
+                  Message:
                 </label>
-                <textarea
+                <textarea value={formData.message} onChange={handleChange} name="message"
                   className="input"
                   style={{
                     padding: "10px",
@@ -197,7 +234,8 @@ function ContactMe() {
                   }}
                   placeholder="Massage"
                 ></textarea>
-                <button
+                <p style={{color:status ?'Green' :'red',textAlign:"center", fontSize:"20px"}}>{status}</p>
+                <button onClick={sendEmail}
                   style={{
                     padding: "10px",
                     borderRadius: "30px",
